@@ -23,14 +23,16 @@ prediction: A string which should have the following format: “x unit” where 
 For example: “2 gram”, “12.5 centimetre”, “2.56 ounce” are valid.
 Invalid cases: “2 gms”, “60 ounce/1.7 kilogram”, “2.2e2 kilogram”, etc.
 Note: Make sure to output a prediction for all indices. If no value is found in the image for any test sample, return an empty string, i.e., “”. If you have less/more number of output samples in the output file as compared to test.csv, your output won’t be evaluated.
+
+
 File Descriptions:
 Source Files:
-
 src/sanity.py: Sanity checker to ensure that the final output file passes all formatting checks.
 Note: The script will not check if fewer/more number of predictions are present compared to the test file. See sample code in src/test.ipynb.
 src/utils.py: Contains helper functions for downloading images from the image_link.
 src/constants.py: Contains the allowed units for each entity type.
-sample_code.py: A sample dummy code that can generate an output file in the given format. Usage of this file is optional.
+sample_code.py: A sample dummy code that can generate an output file in the given format. Usage of this file is optional
+
 Dataset Files:
 
 dataset/train.csv: Training file with labels (entity_value).
